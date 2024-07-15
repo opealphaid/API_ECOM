@@ -1,0 +1,20 @@
+meta {
+  name: Editar informacion empleado
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://10.1.5.184:8086/api/v1/usuarios/employee/8
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+  		"username": "Juan Perez",
+      "correoelectronico": "juan@example.com",
+      "direccion": "Calle Ballivian #234",
+      "telefono": "123456789"
+  }
+}

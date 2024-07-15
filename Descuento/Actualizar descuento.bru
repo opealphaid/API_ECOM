@@ -1,0 +1,26 @@
+meta {
+  name: Actualizar descuento
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:8080/api/v1/descuentos/1
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{LLAVE JWT}}
+}
+
+body:json {
+  {
+    "descripcion": "Descuento de primavera",
+    "porcentajedescuento": 15.5,
+    "fechainicio": "2024-04-01",
+    "fechafin": "2024-04-30",
+    "codigodescuento": "SPRING10"
+  }
+  
+}

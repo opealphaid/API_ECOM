@@ -1,0 +1,23 @@
+meta {
+  name: Actualizar empresa
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:8080/api/v1/empresas/1
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{LLAVE JWT}}
+}
+
+body:json {
+  {
+      "nombre": "Marvel",
+      "descripcion": "Jugueteria de juguetes",
+      "direccion": "Av. Montes # 1345"
+  }
+}

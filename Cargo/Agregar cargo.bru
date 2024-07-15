@@ -1,0 +1,23 @@
+meta {
+  name: Agregar cargo
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8086/api/v1/cargos
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{LLAVE JWT}}
+}
+
+body:json {
+  {
+  	"nombre" : "Mesero",
+    "descripcionFuncion" : "Atender el local",
+    "empresaId" : 2
+  }
+}

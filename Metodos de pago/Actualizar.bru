@@ -1,0 +1,17 @@
+meta {
+  name: Actualizar
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://10.1.5.184:8086/api/v1/metodospago/1
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+  	"detalles" : "PAYPAL"
+  }
+}

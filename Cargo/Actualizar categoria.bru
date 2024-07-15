@@ -1,0 +1,23 @@
+meta {
+  name: Actualizar categoria
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:8086/api/v1/cargos/1
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{LLAVE JWT}}
+}
+
+body:json {
+  {
+    "nombre" : "Mesero",
+    "descripcionFuncion" : "Atender el local",
+    "empresaId" : 2
+  }
+}

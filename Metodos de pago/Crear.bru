@@ -1,0 +1,17 @@
+meta {
+  name: Crear
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://10.1.5.184:8086/api/v1/metodospago
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+  	"detalles" : "PAYPAL"
+  }
+}

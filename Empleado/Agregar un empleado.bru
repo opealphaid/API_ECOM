@@ -1,0 +1,36 @@
+meta {
+  name: Agregar un empleado
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/api/v1/empleados
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{LLAVE JWT}}
+}
+
+body:json {
+  {
+    "usuario": {
+      "username": "Nombre de usuario",
+      "correoelectronico": "correo@example.com",
+      "password": "contraseña",
+      "direccion": "Dirección del usuario",
+      "telefono": "12345678",
+      "tipousuarioid": 3,
+      "empresaid": 1
+    },
+    "empleado": {
+      "cargo": "Cajero"
+    },
+    "tiempo" : 3,
+    "medidatiempo" : "BIMESTRE"
+  
+  }
+  
+}

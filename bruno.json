@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "API POS ALPHA v1 Sprint 5",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

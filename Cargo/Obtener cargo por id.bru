@@ -1,0 +1,15 @@
+meta {
+  name: Obtener cargo por id
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:8086/api/v1/cargos/4
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{LLAVE JWT}}
+}

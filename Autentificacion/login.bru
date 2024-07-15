@@ -1,0 +1,18 @@
+meta {
+  name: login
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:8086/auth/login-user
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "username" : "Juan Perez",
+      "password" : "password123"
+  }
+}
