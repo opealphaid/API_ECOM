@@ -4,8 +4,24 @@ meta {
   seq: 3
 }
 
-get {
-  url: 
-  body: none
+post {
+  url: http://10.1.5.184:8086/api/ventas
+  body: json
   auth: none
+}
+
+body:json {
+  {
+    "productos": [
+      {
+        "id": 3,
+        "cantidad": 2
+      }
+    ],
+    "total": 40,
+    "descuento": 0,
+    "idEmpresa": 3,
+    "idCajero": 3,
+    "idMetodo": 1
+  }
 }
